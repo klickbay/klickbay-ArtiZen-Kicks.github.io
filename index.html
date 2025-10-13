@@ -7,16 +7,24 @@
   <meta name="description" content="KLICKBAY offers curated kids' sneakers, imported luxury perfumes at accessible prices, and bespoke traditional fashion inspired by African heritage. Christiano Ronaldo Quote">
   <meta name="keywords" content="Klickbay, sneakers, kids shoes, luxury perfumes, bespoke fashion, traditional clothing, South Africa">
 
-  <!-- Social / Open Graph -->
   <meta property="og:title" content="KLICKBAY — Sneakers, Perfumes & Bespoke Fashion">
   <meta property="og:description" content="Imported luxury fragrances made accessible — curated sneakers and bespoke traditional garments.">
   <meta property="og:image" content="https://raw.githubusercontent.com/klickbay-ArtiZen-Kicks/klickbay-ArtiZen-Kicks.github.io/main/klickbay-logo.png">
   <meta property="og:type" content="website">
 
-  <!-- Fonts + Icons + Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Store",
+    "name":"KLICKBAY",
+    "description":"Curated kids' sneakers, imported luxury perfumes at accessible prices, and bespoke traditional fashion.",
+    "url":"https://klickbay-ArtiZen-Kicks.github.io"
+  }
+  </script>
 
   <style>
     :root{
@@ -38,6 +46,7 @@
 
     /* 🌅 Background image starts where hero ends */
     main + section {
+      /* NOTE: This image URL is from your provided code */
       background: url('https://raw.githubusercontent.com/klickbay-ArtiZen-Kicks/klickbay-ArtiZen-Kicks.github.io/main/Sunlit%20Shell%20Pearl%20Starfish%20Hair%20Pin.jpg') center/cover no-repeat fixed;
       background-size: cover;
     }
@@ -90,7 +99,6 @@
 
 <body class="antialiased leading-relaxed">
 
-  <!-- Header -->
   <header class="sticky top-0 z-50 bg-black/60 backdrop-blur-sm border-b border-white/6">
     <div class="maxw mx-auto px-6 py-4 flex items-center justify-between gap-4">
       <a href="#home" class="flex items-center gap-3" aria-label="KLICKBAY Home">
@@ -117,7 +125,6 @@
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
       <a href="#perfumes" class="block py-2">Perfumes</a>
       <a href="#sneakers" class="block py-2">Sneakers</a>
@@ -127,7 +134,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <main id="home" class="min-h-[70vh] flex items-center relative overflow-hidden">
     <picture class="absolute inset-0 -z-10">
       <source srcset="hero-large.jpg" media="(min-width:1024px)">
@@ -152,7 +158,6 @@
     </section>
   </main>
 
-  <!-- PERFUMES SECTION -->
   <section id="perfumes" class="maxw mx-auto px-6 py-12">
     <div class="grid lg:grid-cols-2 gap-8 items-center">
       <div class="rounded-xl overflow-hidden shadow-lg gold-glow">
@@ -178,14 +183,87 @@
     </div>
   </section>
 
-  <!-- WhatsApp Floating Button -->
+  <section id="sneakers" class="maxw mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-yellow-300 text-center mb-8">Curated Kids' Sneakers</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="p-4 rounded-xl backdrop-blur-sm bg-black/40 gold-glow">
+        <img src="https://via.placeholder.com/300x180?text=Sneaker+1" alt="Kids Sneaker 1" class="product-img mb-3">
+        <h3 class="font-semibold text-lg">Sporty Runners</h3>
+        <p class="text-sm text-gray-300">Durable, light, and perfect for play.</p>
+        <button onclick="openQuickView('Sporty Runners', 'https://via.placeholder.com/300x180?text=Sneaker+1', 'Sizes 10c-3Y available.')" class="mt-3 text-xs px-3 py-1 bg-white/10 rounded">Quick View</button>
+      </div>
+      <div class="p-4 rounded-xl backdrop-blur-sm bg-black/40 gold-glow">
+        <img src="https://via.placeholder.com/300x180?text=Sneaker+2" alt="Kids Sneaker 2" class="product-img mb-3">
+        <h3 class="font-semibold text-lg">Casual High-Tops</h3>
+        <p class="text-sm text-gray-300">Style meets comfort for everyday wear.</p>
+        <button onclick="openQuickView('Casual High-Tops', 'https://via.placeholder.com/300x180?text=Sneaker+2', 'Classic design, various colors.')" class="mt-3 text-xs px-3 py-1 bg-white/10 rounded">Quick View</button>
+      </div>
+      <div class="p-4 rounded-xl backdrop-blur-sm bg-black/40 gold-glow">
+        <img src="https://via.placeholder.com/300x180?text=Sneaker+3" alt="Kids Sneaker 3" class="product-img mb-3">
+        <h3 class="font-semibold text-lg">Exclusive Edition</h3>
+        <p class="text-sm text-gray-300">Limited stock on premium imports.</p>
+        <button onclick="openQuickView('Exclusive Edition', 'https://via.placeholder.com/300x180?text=Sneaker+3', 'Enquire for premium pricing.')" class="mt-3 text-xs px-3 py-1 bg-white/10 rounded">Quick View</button>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="#contact" class="px-6 py-3 rounded-md font-semibold bg-gradient-to-r from-[var(--gold)] to-[var(--gold-2)] text-black shadow-sm gold-glow">View All & Order</a>
+    </div>
+  </section>
+
+  <section id="fashion" class="maxw mx-auto px-6 py-12">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+      <div class="p-6 rounded-xl backdrop-blur-sm bg-black/40">
+        <h2 class="text-3xl font-bold text-yellow-300">Bespoke Traditional Fashion</h2>
+        <p class="text-gray-200 mt-3">Celebrate African heritage with custom-designed traditional garments. From modern dashikis to elegant cultural wear, each piece is handcrafted to your specification.</p>
+
+        <ul class="mt-4 space-y-2 text-sm text-gray-100">
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-yellow-300"></i>Custom Fit & Fabric Selection</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-yellow-300"></i>Modern and Traditional Styles</li>
+          <li class="flex items-center gap-2"><i class="fas fa-check-circle text-yellow-300"></i>Made for Events, Celebrations, or Daily Wear</li>
+        </ul>
+
+        <div class="mt-6">
+          <a href="#contact" class="px-4 py-2 rounded bg-[var(--gold)] text-black font-semibold gold-glow">Start a Custom Order</a>
+        </div>
+      </div>
+       <div class="rounded-xl overflow-hidden shadow-lg gold-glow order-first lg:order-last">
+        <img src="https://via.placeholder.com/600x400?text=Bespoke+African+Fashion" alt="Traditional African Garment" class="w-full h-96 object-cover" loading="lazy">
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="maxw mx-auto px-6 py-12 text-center">
+    <div class="max-w-xl mx-auto p-8 rounded-2xl backdrop-blur-md bg-black/30 gold-glow">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-300">Enquire Now</h2>
+      <p class="text-gray-200 mb-6">Use the contact details below for perfume orders, sneaker stock checks, or to start your bespoke fashion consultation. We offer fast, personalized service.</p>
+
+      <div class="space-y-4">
+        <div class="flex items-center justify-center gap-3 text-lg">
+          <i class="fab fa-whatsapp text-green-500"></i>
+          <span class="font-semibold">+27 68 032 0894</span>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-lg">
+          <i class="fas fa-envelope text-red-500"></i>
+          <span class="font-semibold">klickbayza@gmail.com</span>
+        </div>
+      </div>
+      <a href="https://wa.me/27680320894" class="mt-6 inline-block px-6 py-3 rounded-md font-semibold bg-gradient-to-r from-[var(--gold)] to-[var(--gold-2)] text-black shadow-sm gold-glow">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="mt-12 border-t border-white/6 py-8 text-center text-gray-400 text-sm">
+    <div class="maxw mx-auto px-6">
+      <p>&copy; 2024 KLICKBAY. All Rights Reserved. Curated with pride from South Africa 🇿🇦</p>
+      <p class="mt-2 text-xs">Sneakers · Luxury Perfumes · Bespoke Traditional Fashion</p>
+    </div>
+  </footer>
+
   <a href="https://wa.me/27680320894" class="fixed right-6 bottom-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
     <div style="background:#25d366" class="w-full h-full rounded-full flex items-center justify-center text-white gold-glow">
       <i class="fab fa-whatsapp fa-lg"></i>
     </div>
   </a>
 
-  <!-- Modal -->
   <div id="modal" class="fixed inset-0 hidden items-center justify-center z-60">
     <div class="absolute inset-0 bg-black/70"></div>
     <div class="relative bg-black/90 rounded-xl w-11/12 md:w-3/4 lg:w-1/2 p-6 gold-glow">
@@ -197,12 +275,15 @@
   <script>
     const toggle = document.getElementById('mobile-toggle'),
           mobile = document.getElementById('mobile-menu');
+    
+    // Mobile Menu Toggle
     toggle?.addEventListener('click', ()=> {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       mobile.classList.toggle('hidden');
     });
 
+    // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
@@ -211,9 +292,60 @@
           if (el) {
             e.preventDefault();
             el.scrollIntoView({behavior:'smooth', block:'start'});
+            // Close mobile menu on click
+            if (!mobile.classList.contains('hidden')) {
+               toggle.setAttribute('aria-expanded', 'false');
+               mobile.classList.add('hidden');
+            }
           }
         }
       });
+    });
+
+    // Modal Functions
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal-content');
+
+    function openQuickView(title, img, note) {
+      modalContent.innerHTML = `
+        <div class="grid md:grid-cols-2 gap-4 items-start">
+          <div><img src="${img}" alt="${title}" class="w-full h-64 object-cover rounded"></div>
+          <div>
+            <h3 class="text-xl font-bold mb-2 text-yellow-300">${title}</h3>
+            <p class="text-gray-300 mb-3">${note || ''}</p>
+            <p class="text-sm text-gray-300 mb-4">To purchase or check stock, click Enquire — we'll reply with availability & pricing.</p>
+            <a href="#contact" class="px-4 py-2 rounded bg-[var(--gold)] text-black font-semibold gold-glow">Enquire</a>
+          </div>
+        </div>`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function openQuickList(id) {
+      modalContent.innerHTML = `<h3 class="text-xl font-bold mb-3 text-yellow-300">Available Fragrances</h3>
+        <ul class="list-disc ml-5 text-gray-300">
+          <li>Good Girl (Inspired) — sweet vanilla & jasmine</li>
+          <li>Baccarat Rouge (Inspired) — amber & saffron</li>
+          <li>Dior Sauvage (Inspired) — bergamot & pepper</li>
+          <li>Chanel-style florals — powdery, classic</li>
+          <li>And more — enquire for full list of over 30 scents</li>
+        </ul>
+        <div class="mt-4"><a href="#contact" class="px-4 py-2 rounded bg-[var(--gold)] text-black gold-glow">Enquire for full list</a></div>`;
+      modal.classList.remove('hidden'); 
+      modal.classList.add('flex');
+    }
+
+    // Modal Close Listeners
+    document.getElementById('modal-close')?.addEventListener('click', ()=> {
+      modal.classList.add('hidden'); 
+      modal.classList.remove('flex');
+    });
+
+    modal?.addEventListener('click', (e)=> {
+      if (e.target.id === 'modal') { 
+        modal.classList.add('hidden'); 
+        modal.classList.remove('flex'); 
+      }
     });
   </script>
 </body>
